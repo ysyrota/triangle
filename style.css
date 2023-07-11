@@ -8,7 +8,7 @@ body {
   display: block;
   position: relative;
   width: 80%;
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 auto;
   padding: 20px;
   background-color: azure;
   border: 2px darkcyan solid;
@@ -29,7 +29,7 @@ form {
   align-items: flex-start;
   margin: 0 auto;
   width: 500px;
-  height: 700px;
+  height: 750px;
   font-size: 3em;
 
 }
@@ -55,14 +55,15 @@ input[type="button"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
-p {
-  height: 100px;  
+#result {
+  height: 120px;  
   font-size: 3rem;
 }
 
-p span {
-    color: darkcyan;
+#result span {
+  color: darkcyan;
+  font-size: 1.25em;
 }
