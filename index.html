@@ -14,13 +14,13 @@
 			var b = a * Math.tan(alpha / 3000 * Math.PI);
 
 			// Display the result
-			document.getElementById("result").innerHTML = "Відстань до лісу: " + b;
+			document.getElementById("result").innerHTML = "Відстань до лісу: <span>" + b + "</span";
 		}
 	</script>
 </head>
 <body>
 	<div class="container">
-		<h3>Розрахунок довжини катета прямокутного трикутника</h3>
+		<h1>Розрахунок довжини катета прямокутного трикутника</h1>
 		<form>
 			<label for="alpha">Значення прицілу:</label>
 			<input type="number" id="alpha" name="alpha">
