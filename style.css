@@ -1,59 +1,68 @@
 body {
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: whitesmoke;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: whitesmoke;
 }
 .container {
-    display: block;
-    position:relative;
-    width: 80%;
-    margin: 30px auto 0 auto;
-    padding: 20px;
-    background-color: azure;
-    border: 2px darkcyan solid;
-    border-radius: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  position: relative;
+  width: 80%;
+  margin: 30px auto 0 auto;
+  padding: 20px;
+  background-color: azure;
+  border: 2px darkcyan solid;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h3 {
-    font-size: 1.25em;
-    text-align: center;
+h1 {
+  font-size: 3em;
+  text-align: center;
+  color: gray;
 }
 
 form {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 auto;
-    width: 500px;
-    height: 300px;
-    font-size: 1.2em;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  width: 500px;
+  height: 700px;
+  font-size: 3em;
+
 }
 
 input[type="number"] {
-    width: 100%;
-    padding: 10px 20px;
-    margin-bottom: 15px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 3rem;
+
 }
 
 input[type="button"] {
-    width: 100%;
-    height: 50px;
-    background-color: darkcyan;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.25em;
+  width: 100%;
+  background-color: darkcyan;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
 }
 
 p {
-    font-size: 1.2em;
+  height: 100px;  
+  font-size: 3rem;
+}
+
+p span {
+    color: darkcyan;
 }
