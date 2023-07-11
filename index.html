@@ -3,6 +3,7 @@
 <head>
 	<title>Розрахунок довжини катета прямокутного трикутника</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
 	<script>
 		function calculate() {
 			// Get the input values
@@ -18,17 +19,19 @@
 	</script>
 </head>
 <body>
-	<h1>Розрахунок довжини катета прямокутного трикутника</h1>
-	<form>
-		<label for="alpha">Значення прицілу:</label>
-		<input type="number" id="alpha" name="alpha"><br>
+	<div class="container">
+		<h3>Розрахунок довжини катета прямокутного трикутника</h3>
+		<form>
+			<label for="alpha">Значення прицілу:</label>
+			<input type="number" id="alpha" name="alpha">
 
-		<label for="a">Висота лісу:</label>
-		<input type="number" id="a" name="a"><br>
+			<label for="a">Висота лісу:</label>
+			<input type="number" id="a" name="a">
 
-		<input type="button" value="Розрахувати" onclick="calculate()"><br>
+			<input type="button" value="Розрахувати" onclick="calculate()">
 
-		<p id="result"></p>
-	</form>
+			<p id="result"></p>
+		</form>
+	</div>
 </body>
 </html>
