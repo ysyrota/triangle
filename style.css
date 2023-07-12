@@ -25,13 +25,18 @@ h1 {
 form {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
   margin: 0 auto;
   width: 500px;
   height: 750px;
   font-size: 3em;
+}
 
+.input-box {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
 }
 
 input[type="number"] {
