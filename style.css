@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5rem;
   text-align: center;
   color: gray;
 }
@@ -38,7 +38,7 @@ input[type="number"] {
   width: 100%;
   height: 50px;
   padding: 10px 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -66,4 +66,61 @@ input[type="button"] {
 #result span {
   color: darkcyan;
   font-size: 1.25em;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 4rem;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 2.5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-style {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radio-style {
+  background-color: #ccc;
+}
+
+
+.radio-container input:checked ~ .radio-style {
+  background-color: darkcyan;
+}
+
+.radio-style:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-style:after {
+  display: block;
+}
+
+.radio-container .radio-style:after {
+ 	top: 0.5rem;
+	left: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background: white;
 }
