@@ -5,32 +5,65 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
 	<script>
-		function calculate() {
-			// Get the input values
-			var alpha = parseFloat(document.getElementById("alpha").value);
-			var a = parseFloat(document.getElementById("a").value);
+		document.addEventListener("DOMContentLoaded", function(event) {
 
-			// Calculate the length of the other cathetus
-			var b = a / Math.tan(alpha * 0.06 * Math.PI / 180);
+			document.addEventListener("keyup", changeData);
+			document.querySelector(".radio-toolbar").addEventListener("click", changeData);
 
-			// Display the result
-			document.getElementById("result").innerHTML = "Відстань до лісу: <span>" + b + "</span";
-		}
+			checkData = () => (document.getElementById("alpha").value && document.getElementById("a").value) ? true : false;
+
+			function changeData() {
+				(checkData()) ? calculate() : document.getElementById("result").innerHTML = "Недостатньо даних для обрахунку";
+			}
+
+			function calculate() {
+				let alpha = parseFloat(document.getElementById("alpha").value);
+				let a = parseFloat(document.getElementById("a").value);
+				let standart = document.getElementsByName("standart");
+				let coefficient;
+				for (i = 0; i < standart.length; i++) {
+					if (standart[i].checked) {
+						coefficient = parseFloat(standart[i].value);
+					}
+						
+				}
+				// Calculate the length of the other cathetus
+				let b = a / Math.tan(alpha * coefficient * Math.PI / 180);
+
+				// Display the result
+				document.getElementById("result").innerHTML = "Відстань до лісу: <span>" + b.toFixed(7) + "</span";
+			}
+		});
+
 	</script>
 </head>
 <body>
 	<div class="container">
 		<h1>Розрахунок довжини катета прямокутного трикутника</h1>
 		<form>
-			<label for="alpha">Значення прицілу:</label>
-			<input type="number" id="alpha" name="alpha">
+			<div class="radio-toolbar">
+				
+				<input type="radio" id="nato" name="standart" value="0.05625" checked="true">
+				<label class="radio-container" for="nato">НАТО</label>
+				
+				<input type="radio" id="srsr" name="standart" value="0.06" >
+				<label class="radio-container" for="srsr">СРСР</label>
+				
+				<input type="radio" id="degree" name="standart" value="1" >
+				<label class="radio-container" for="degree">Градуси</label>
+			</div>
 
-			<label for="a">Висота лісу:</label>
-			<input type="number" id="a" name="a">
+			<div class="input-box">
+				<label for="alpha">Значення прицілу:</label>
+				<input type="number" id="alpha" name="alpha">
+			</div>
 
-			<input type="button" value="Розрахувати" onclick="calculate()">
+			<div class="input-box">
+				<label for="a">Висота лісу:</label>
+				<input type="number" id="a" name="a">
+			</div>
 
-			<div id="result"></div>
+			<div id="result">Недостатньо даних для обрахунку</div>
 		</form>
 	</div>
 </body>
