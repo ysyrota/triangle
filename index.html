@@ -11,7 +11,7 @@
 			var a = parseFloat(document.getElementById("a").value);
 
 			// Calculate the length of the other cathetus
-			var b = a * Math.tan(alpha / 3000 * Math.PI);
+			var b = a / Math.tan(alpha * 0.06 * Math.PI / 180);
 
 			// Display the result
 			document.getElementById("result").innerHTML = "Відстань до лісу: <span>" + b + "</span";
