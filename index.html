@@ -7,8 +7,8 @@
 	<script>
 		function calculate() {
 			// Get the input values
-			var alpha = parseFloat(document.getElementById("alpha").value);
-			var a = parseFloat(document.getElementById("a").value);
+			let alpha = parseFloat(document.getElementById("alpha").value);
+			let a = parseFloat(document.getElementById("a").value);
 			
 			let standart = document.getElementsByName("standart");
 			let coefficient;
@@ -19,7 +19,7 @@
 					
             }
 			// Calculate the length of the other cathetus
-			var b = a / Math.tan(alpha * coefficient * Math.PI / 180);
+			let b = a / Math.tan(alpha * coefficient * Math.PI / 180);
 
 			// Display the result
 			document.getElementById("result").innerHTML = "Відстань до лісу: <span>" + b + "</span";
@@ -30,19 +30,16 @@
 	<div class="container">
 		<h1>Розрахунок довжини катета прямокутного трикутника</h1>
 		<form>
-			<div class="radio">
-				<label class="radio-container">НАТО
-					<input type="radio" id="nato" name="standart" value="0.05625" checked="true">
-					<span class="radio-style"></span>
-				</label>
-				<label class="radio-container">СРСР
-					<input type="radio" id="srsr" name="standart" value="0.06" >
-					<span class="radio-style"></span>
-				</label>
-				<label class="radio-container">Градуси
-					<input type="radio" id="degree" name="standart" value="1" >
-					<span class="radio-style"></span>
-				</label>
+			<div class="radio-toolbar">
+				
+				<input type="radio" id="nato" name="standart" value="0.05625" checked="true">
+				<label class="radio-container" for="nato">НАТО</label>
+				
+				<input type="radio" id="srsr" name="standart" value="0.06" >
+				<label class="radio-container" for="srsr">СРСР</label>
+				
+				<input type="radio" id="degree" name="standart" value="1" >
+				<label class="radio-container" for="degree">Градуси</label>
 			</div>
 
 			<label for="alpha">Значення прицілу:</label>
